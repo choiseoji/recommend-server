@@ -9,6 +9,7 @@ class SourceFieldEnum(enum.Enum):
 
 class Book(Base):
     __tablename__ = "books"
+    __table_args__ = {"mysql_charset": "utf8mb4"}
     
     book_id = Column(Integer, primary_key=True, index=True)
     book_name = Column(String(200))
